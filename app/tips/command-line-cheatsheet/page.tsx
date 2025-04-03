@@ -4,7 +4,7 @@ import { extractHeadings, Heading } from "@/lib/extractHeadings";
 import { markdownToHtml } from "@/lib/markdownToHtml";
 import Sidebar from "@/components/Sidebar";
 
-export default async function SamplePage() {
+export default async function CommandLineCheatsheetPage() {
   const markdownFilePath = path.join(process.cwd(), "content", "tips", "command-line-cheatsheet.md");
   const markdownContent = fs.readFileSync(markdownFilePath, "utf8");
 
