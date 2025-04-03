@@ -3,19 +3,19 @@
 ### リモート -> ローカル
 #### リモートにあるリポジトリをローカルに複製する
 
-```bash:
+```bash
 git clone リポジトリURL
 ```
 
 #### ローカルをリモートの内容で最新化する
 
-```bash:
+```bash
 git pull
 ```
 
 #### リモートブランチをローカルに落とす
 
-```bash:
+```bash
 # ローカルのリモート追跡ブランチに持ってきたあと、ローカルにブランチを作成する
 git fetch
 git checkout -b feature-XXXXXX origin/feature-XXXXXX

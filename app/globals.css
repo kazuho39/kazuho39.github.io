@@ -1,3 +1,5 @@
+@import 'highlight.js/styles/github-dark.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -90,23 +92,6 @@ html {
 
 .markdown li {
   color: white;
-}
-
-.markdown code {
-  background-color: #e1e1e1;
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  font-family: 'Courier New', Courier, monospace;
-  color: black;
-}
-
-.markdown pre {
-  background-color: #e1e1e1;
-  padding: 1em;
-  border-radius: 4px;
-  overflow-x: auto;
-  font-family: 'Courier New', Courier, monospace;
-  color: black;
 }
 
 .markdown summary {
