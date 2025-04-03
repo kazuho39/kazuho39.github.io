@@ -15,14 +15,17 @@ export default async function SamplePage() {
   const contentHtml = await markdownToHtml(markdownContent);
 
   return (
-    <div className="flex w-full flex-row p-12">
-      {/* Sidebar for headings */}
-      <Sidebar headings={headings} />
+    <>
+      <title>Laravel Directory Structure</title>
+      <div className="flex w-full flex-row p-12">
+        {/* Sidebar for headings */}
+        <Sidebar headings={headings} />
 
-      {/* Main content */}
-      <div className="markdown w-3/4">
-        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        {/* Main content */}
+        <div className="markdown w-3/4">
+          <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

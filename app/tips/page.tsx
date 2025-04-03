@@ -22,9 +22,12 @@ export default function TipsPage() {
   }));
 
   return (
-    <div className="flex w-full flex-col items-center p-12">
-      <h1 className="text-4xl font-bold mb-8">TIPS</h1>
-      <List items={listItems} />
-    </div>
+    <>
+      <title>Tips</title>
+      <div className="flex w-full flex-col items-center p-12">
+        <h1 className="text-4xl font-bold mb-8">Tips</h1>
+        <List items={listItems} />
+      </div>
+    </>
   );
 }

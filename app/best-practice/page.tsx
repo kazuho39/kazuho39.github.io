@@ -22,9 +22,12 @@ export default function BestPracticePage() {
   }));
 
   return (
-    <div className="flex w-full flex-col items-center p-12">
-      <h1 className="text-4xl font-bold mb-8">Best Practice</h1>
-      <List items={listItems} />
-    </div>
+    <>
+      <title>Best Practice</title>
+      <div className="flex w-full flex-col items-center p-12">
+        <h1 className="text-4xl font-bold mb-8">Best Practice</h1>
+        <List items={listItems} />
+      </div>
+    </>
   );
 }
