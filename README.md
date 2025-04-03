@@ -1,4 +1,7 @@
-https://kazuho39.github.io/
+# Page
+https://kazuho39.github.io/  
 
-docker compose up -d
-docker compose exec app npm run dev
+# Local
+docker compose up -d  
+docker compose exec app npm run dev  
+http://localhost:3000/  
