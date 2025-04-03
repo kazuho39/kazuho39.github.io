@@ -3,7 +3,7 @@ import LinkCard from "@/components/LinkCard";
 export default function Home() {
   return (
     <>
-      <title>Kazuho's Portfolio</title>
+      <title>Kazuho&apos;s Portfolio</title>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex gap-8">
           <LinkCard
