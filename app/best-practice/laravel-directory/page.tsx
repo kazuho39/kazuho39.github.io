@@ -22,7 +22,7 @@ export default async function SamplePage() {
         <Sidebar headings={headings} />
 
         {/* Main content */}
-        <div className="markdown w-3/4">
+        <div className="markdown w-full md:w-3/4">
           <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
         </div>
       </div>

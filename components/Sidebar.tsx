@@ -6,7 +6,7 @@ interface SidebarProps {
 
 export default function Sidebar({ headings }: SidebarProps) {
   return (
-    <aside className="w-1/4 pr-8">
+    <aside className="w-1/4 pr-8 hidden md:block">
       <nav className="sticky top-0">
         <h2 className="text-xl font-bold mb-4">Table of Contents</h2>
         <ul className="space-y-2">
