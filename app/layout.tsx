@@ -16,7 +16,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header className="w-full bg-gray-800 text-white p-4">
+          <div className="max-w-5xl mx-auto">
+            <a href="/" className="text-lg font-bold hover:underline">
+              Home
+            </a>
+          </div>
+        </header>
+        <main className="flex min-h-screen flex-col items-center justify-between p-4 gap-8">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
