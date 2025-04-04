@@ -17,7 +17,7 @@ export default async function CommandLineCheatsheetPage() {
   return (
     <>
       <title>Command Line Cheatsheet</title>
-      <div className="flex w-full flex-row p-12">
+      <div className="flex w-full flex-row p-4 md:p-12">
         {/* Sidebar for headings */}
         <Sidebar headings={headings} />
 

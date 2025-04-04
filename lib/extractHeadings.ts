@@ -12,7 +12,10 @@ export function extractHeadings(markdownContent: string): Heading[] {
   const processor = remark().use(() => (tree) => {
     visit(tree, "heading", (node: any) => {
       const text = node.children.map((child: any) => child.value).join("");
-      const id = text.toLowerCase().replace(/\s+/g, "-");
+      const id = text
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/\(|\)/g, ""); // Remove parentheses
       headings.push({ text, id, level: node.depth });
     });
   });

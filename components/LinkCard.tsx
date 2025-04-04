@@ -10,7 +10,7 @@ export default function LinkCard({ href, title, description }: LinkCardProps) {
   return (
     <Link
       href={href}
-      className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+      className="group rounded-lg border border-transparent md:px-5 md:py-4 transition-colors md:hover:border-gray-300 md:hover:bg-gray-100 md:hover:dark:border-neutral-700 md:hover:dark:bg-neutral-800/30"
     >
       <h2 className="mb-3 text-2xl font-semibold">
         {title}{" "}

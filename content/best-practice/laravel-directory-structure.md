@@ -2,19 +2,19 @@
 レイヤードアーキテクチャの考え方と、DDDの考え方を取り入れた構成を意識している。  
 
 - app
-  - Console(※バッチ)
+  - Console(バッチ)
     - Command
-  - Http(※プレゼンテーション層)
+  - Http(プレゼンテーション層)
     - Controllers
     - Middleware
     - Request
-  - Application(※アプリケーション層)
-    - Context(※コンテキストごと)
+  - Application(アプリケーション層)
+    - Context(コンテキストごと)
       - UseCase
       - Dto
-  - Domain(※ドメイン層)
+  - Domain(ドメイン層)
     - Constants
-    - Context(※コンテキストごと)
+    - Context(コンテキストごと)
       - ValueObject
       - Entity
       - DomainService
@@ -22,7 +22,7 @@
       - Factory
       - Repository
       - Strategy
-  - Infrastructure(※インフラストラクチャ層)
+  - Infrastructure(インフラストラクチャ層)
     - EloquentModel
     - Repository
     - Mapper
@@ -34,7 +34,7 @@
   - Feature
     - Http
 
-## Http(※プレゼンテーション層)
+## Http(プレゼンテーション層)
 プレゼンテーション層として、APIリクエストを受け取り、レスポンスを返す。
 
 <details>
@@ -59,7 +59,7 @@ Requestクラスで行うバリデーションは必須チェックや型のチ�
 
 </details>
 
-## Application(※アプリケーション層)
+## Application(アプリケーション層)
 アプリケーション層として、ユースケース(ビジネスロジックの流れ)を定義。  
 
 <details>
@@ -76,7 +76,7 @@ ex. リクエストデータをユースケースに渡すための構造や、�
 
 </details>
 
-## Domain(※ドメイン層)
+## Domain(ドメイン層)
 ドメイン層として、業務知識やビジネスルールを定義。  
 
 <details>
@@ -120,7 +120,7 @@ ex. 処理の切り替えをクラス単位で管理したい場合。
 
 </details>
 
-## Infrastructure(※インフラストラクチャ層)
+## Infrastructure(インフラストラクチャ層)
 インフラストラクチャ層として、データベースや外部システムとのやり取りを実装。
 
 <details>
