@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { extractHeadings, Heading } from "@/lib/extractHeadings";
 import { markdownToHtml } from "@/lib/markdownToHtml";
-import Sidebar from "@/components/Sidebar";
+import LayoutMarkdownWithSidebar from "@/components/LayoutMarkdownWithSidebar";
 
 export default async function LaravelDirectoryStructurePage() {
   const markdownFilePath = path.join(process.cwd(), "content", "best-practice", "laravel-directory-structure.md");
@@ -17,15 +17,7 @@ export default async function LaravelDirectoryStructurePage() {
   return (
     <>
       <title>Laravel Directory Structure</title>
-      <div className="flex w-full flex-row p-4 md:p-12">
-        {/* Sidebar for headings */}
-        <Sidebar headings={headings} />
-
-        {/* Main content */}
-        <div className="markdown w-full md:w-3/4">
-          <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
-        </div>
-      </div>
+      <LayoutMarkdownWithSidebar headings={headings} contentHtml={contentHtml} />
     </>
   );
 }
