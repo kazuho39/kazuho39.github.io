@@ -9,7 +9,7 @@ interface LayoutMarkdownWithSidebarProps {
 
 const LayoutMarkdownWithSidebar: React.FC<LayoutMarkdownWithSidebarProps> = ({ headings, contentHtml }) => {
   return (
-    <div className="flex w-full flex-row p-4 md:p-12">
+    <div className="flex w-full flex-row p-4 md:p-8">
       {/* Sidebar for headings */}
       <Sidebar headings={headings} />
 

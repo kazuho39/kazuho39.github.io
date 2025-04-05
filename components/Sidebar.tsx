@@ -7,7 +7,7 @@ interface SidebarProps {
 export default function Sidebar({ headings }: SidebarProps) {
   return (
     <aside className="w-1/4 pr-8 hidden md:block">
-      <nav className="sticky top-0">
+      <nav className="sticky top-0 max-h-screen overflow-y-auto">
         <h2 className="text-xl font-bold mb-4">Table of Contents</h2>
         <ul className="space-y-2">
           {headings.map((heading) => (
