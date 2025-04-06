@@ -88,10 +88,12 @@ html {
   margin-left: 1.5em;
   margin-bottom: 1em;
   color: white;
+  @apply list-disc;
 }
 
 .markdown li {
   color: white;
+
 }
 
 .markdown summary {
@@ -116,5 +118,40 @@ html {
 }
 
 .markdown td {
+  color: white;
   @apply px-6 py-3;
+}
+
+.markdown .box-speech {
+  position: relative;
+  margin: 2em 0 2em 40px;
+  padding: 8px 15px;
+  background: #FFF5EE;
+  border-radius: 30px;
+}
+
+.markdown .box-speech__text {
+  color: #333;
+  margin-bottom: 0;
+}
+
+.markdown .point-box {
+  margin: 2em 0;
+  background: #f0f5ff;
+}
+
+.markdown .point-box .box-title {
+  font-size: 1.2em;
+  background: #5fb3f5;
+  padding: 4px;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.markdown .point-box .box-content {
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin: 0;
 }

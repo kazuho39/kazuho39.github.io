@@ -9,6 +9,7 @@ import { visit } from 'unist-util-visit';
 import type { Node } from 'unist';
 
 import bash from 'highlight.js/lib/languages/bash';
+import php from 'highlight.js/lib/languages/php';
 
 function remarkRemovePublicPath() {
   return (tree: Node) => {
@@ -26,7 +27,7 @@ export async function markdownToHtml(markdownContent: string): Promise<string> {
     .use(remarkGfm)
     .use(remarkRemovePublicPath)
     .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeHighlight, {languages: {bash}})
+    .use(rehypeHighlight, {languages: {bash, php}})
     .use(rehypeSlug)
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(markdownContent);
