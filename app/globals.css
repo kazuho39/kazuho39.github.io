@@ -54,29 +54,31 @@ html {
   margin-top: 0.5em;
   font-size: 2.25rem;
   line-height: calc(2.5 / 2.25);
-  text-decoration: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.75);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
+  border-top: solid 3px #364e96;
+  border-bottom: solid 3px #364e96;
+  padding: 0.5em 0;
 }
 
 .markdown h2 {
   font-size: 1.875rem;
-  line-height: calc(2.25 / 1.875);
-  text-decoration: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.75);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
+  line-height: 1.4;
+  border-left: solid 5px #ffaf58;
+  padding: 2px 5px;
 }
 
 .markdown h3 {
   font-size: 1.5rem;
-  line-height: calc(2 / 1.5);
+  line-height: 1.4;
+  padding: 2px 5px;
+  border-left: 4px #999 solid;
+  background: linear-gradient(transparent 90%, #87CEEB 70%);
 }
 
 .markdown h4 {
   font-size: 1.25rem;
   line-height: calc(1.75 / 1.25);
+  border-left: solid 4px #999;
+  padding: 2px 5px;
 }
 
 .markdown p {
@@ -93,7 +95,6 @@ html {
 
 .markdown li {
   color: white;
-
 }
 
 .markdown summary {
