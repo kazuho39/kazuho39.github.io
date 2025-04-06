@@ -5,17 +5,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 15;
+  --background-end-rgb: 0, 0, 15;
 }
 
 body {
@@ -70,8 +62,8 @@ html {
   font-size: 1.5rem;
   line-height: 1.4;
   padding: 2px 5px;
-  border-left: 4px #999 solid;
-  background: linear-gradient(transparent 90%, #87CEEB 70%);
+  border-left: 6px #999 solid;
+  background: linear-gradient(transparent 95%, #87CEEB 70%);
 }
 
 .markdown h4 {
