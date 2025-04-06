@@ -44,9 +44,11 @@
 大切なのは、「**ソースコードを読む前に意識するべきことを知る**」ということです。
 
 <div class="point-box">
-  <span class="box-title">POINT</span>
-  <span class="box-content">いきなりソースコードを読むではなく「事前にポイントを押さえてから読む」ことで、</span>
-  <span class="box-content">頭の中を整理しながら読めるようになり、作業効率が上がります。</span>
+  <span class="point-box__title">POINT</span>
+  <p class="point-box__content">
+    いきなりソースコードを読むではなく「事前にポイントを押さえてから読む」ことで、<br/>
+    頭の中を整理しながら読めるようになり、作業効率が上がります。
+  </p>
 </div>
 
 ### そのシステムの概要を知る
