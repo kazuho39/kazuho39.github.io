@@ -55,13 +55,13 @@ html {
   font-size: 1.875rem;
   line-height: 1.4;
   border-left: solid 5px #ffaf58;
-  padding: 2px 5px;
+  padding: 2px 10px;
 }
 
 .markdown h3 {
   font-size: 1.5rem;
   line-height: 1.4;
-  padding: 2px 5px;
+  padding: 2px 8px;
   border-left: 6px #999 solid;
   background: linear-gradient(transparent 95%, #87CEEB 70%);
 }
@@ -70,7 +70,7 @@ html {
   font-size: 1.25rem;
   line-height: calc(1.75 / 1.25);
   border-left: solid 4px #999;
-  padding: 2px 5px;
+  padding: 2px 8px;
 }
 
 .markdown p {
@@ -95,11 +95,12 @@ html {
 }
 
 .markdown table {
-  @apply w-full text-sm text-left text-gray-500 overflow-x-auto shadow-md sm:rounded-lg;
+  @apply w-full text-sm text-left text-gray-500 overflow-x-auto shadow-md sm:rounded-lg m-4;
 }
 
 .markdown thead {
-  @apply text-sm text-gray-700 bg-gray-50;
+  color: black;
+  @apply text-sm bg-gray-50;
 }
 
 .markdown th {
@@ -119,8 +120,8 @@ html {
   position: relative;
   margin: 2em 0 2em 40px;
   padding: 8px 15px;
-  background: #FFF5EE;
-  border-radius: 30px;
+  background: #e2e2e2;
+  border-radius: 10px;
 }
 
 .markdown .box-speech__text {
