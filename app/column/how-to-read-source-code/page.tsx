@@ -16,7 +16,7 @@ export default async function CommandLineCheatsheetPage() {
 
   return (
     <>
-      <title>Command Line Cheatsheet</title>
+      <title>How To Read Source Code</title>
       <LayoutMarkdownWithSidebar headings={headings} contentHtml={contentHtml} />
     </>
   );

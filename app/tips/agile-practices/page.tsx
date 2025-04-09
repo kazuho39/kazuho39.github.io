@@ -16,7 +16,7 @@ export default async function LaravelDirectoryStructurePage() {
 
   return (
     <>
-      <title>Laravel Directory Structure</title>
+      <title>Agile Practices</title>
       <LayoutMarkdownWithSidebar headings={headings} contentHtml={contentHtml} />
     </>
   );

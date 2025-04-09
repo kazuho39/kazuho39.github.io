@@ -5,7 +5,7 @@ import { markdownToHtml } from "@/lib/markdownToHtml";
 import LayoutMarkdownWithSidebar from "@/components/LayoutMarkdownWithSidebar";
 
 export default async function CommandLineCheatsheetPage() {
-  const markdownFilePath = path.join(process.cwd(), "content", "column", "effort-estimation-methods.md");
+  const markdownFilePath = path.join(process.cwd(), "content", "tips", "data-driven-design.md");
   const markdownContent = fs.readFileSync(markdownFilePath, "utf8");
 
   // Extract headings
@@ -16,7 +16,7 @@ export default async function CommandLineCheatsheetPage() {
 
   return (
     <>
-      <title>Effort Estimation Methods</title>
+      <title>Data Driven Design</title>
       <LayoutMarkdownWithSidebar headings={headings} contentHtml={contentHtml} />
     </>
   );
