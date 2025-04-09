@@ -5,7 +5,7 @@ import { markdownToHtml } from "@/lib/markdownToHtml";
 import LayoutMarkdownWithSidebar from "@/components/LayoutMarkdownWithSidebar";
 
 export default async function LaravelDirectoryStructurePage() {
-  const markdownFilePath = path.join(process.cwd(), "content", "best-practice", "agile-practices.md");
+  const markdownFilePath = path.join(process.cwd(), "content", "tips", "agile-practices.md");
   const markdownContent = fs.readFileSync(markdownFilePath, "utf8");
 
   // Extract headings
