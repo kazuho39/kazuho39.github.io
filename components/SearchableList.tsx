@@ -21,10 +21,12 @@ export default function SearchableList({ articles, path }: SearchableListProps) 
     article.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const listItems = filteredArticles.map((article) => ({
-    title: article.title,
-    href: `${path}/${article.slug}`, // pathを使用して動的に生成
-  }));
+  const listItems = filteredArticles
+    .map((article) => ({
+      title: article.title,
+      href: `${path}/${article.slug}`, // pathを使用して動的に生成
+    }))
+    .sort((a, b) => a.title.localeCompare(b.title)); // titleで昇順ソート
 
   return (
     <div className="flex w-full flex-col items-center">
