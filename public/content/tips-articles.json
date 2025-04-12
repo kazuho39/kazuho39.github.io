@@ -1,0 +1,22 @@
+[
+  {
+    "title": "アジャイル開発について",
+    "slug": "agile-practices"
+  },
+  {
+    "title": "コードレビューのポイント",
+    "slug": "code-review-point"
+  },
+  {
+    "title": "コマンドラインでよく使うもの",
+    "slug": "command-line-cheatsheet"
+  },
+  {
+    "title": "ドメイン駆動設計(DDD)",
+    "slug": "data-driven-design"
+  },
+  {
+    "title": "よく使うGitコマンド",
+    "slug": "git-command-cheatsheet"
+  }
+]

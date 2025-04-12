@@ -1,22 +1,24 @@
-import path from "path";
-import List from "@/components/List";
-import { getArticles } from "@/lib/getArticles";
+'use client'
+
+import { useEffect, useState } from "react";
+import SearchableList from "@/components/SearchableList";
 
 export default function TipsPage() {
-  const articlesDirectory = path.join(process.cwd(), "content", "tips");
-  const articles = getArticles(articlesDirectory);
+  const [articles, setArticles] = useState<{ title: string; slug: string }[]>([]);
 
-  const listItems = articles.map((article) => ({
-    title: article.title,
-    href: `/tips/${article.slug}`,
-  }));
+  useEffect(() => {
+    // JSONファイルから記事データをフェッチ
+    fetch("/content/tips-articles.json")
+      .then((res) => res.json())
+      .then((data) => setArticles(data));
+  }, []);
 
   return (
     <>
       <title>Tips</title>
       <div className="flex w-full flex-col items-center p-12">
         <h1 className="text-4xl font-bold mb-8">Tips</h1>
-        <List items={listItems} />
+        <SearchableList articles={articles} path="/tips" />
       </div>
     </>
   );
