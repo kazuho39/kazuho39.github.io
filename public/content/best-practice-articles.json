@@ -1,14 +1,6 @@
 [
   {
-    "title": "ValueObjectの実装",
-    "slug": "about-value-object"
-  },
-  {
     "title": "Laravelのディレクトリ構成",
     "slug": "laravel-directory-structure"
-  },
-  {
-    "title": "Null Objectパターン",
-    "slug": "null-object"
   }
 ]

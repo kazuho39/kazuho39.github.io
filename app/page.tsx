@@ -17,6 +17,11 @@ export default function Home() {
             description="My Best Practice."
           />
           <LinkCard
+            href="/study-note"
+            title="Stydy Note"
+            description="My Study Node."
+          />
+          <LinkCard
             href="/column"
             title="Column"
             description="My Column."

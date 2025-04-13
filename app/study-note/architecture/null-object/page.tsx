@@ -5,7 +5,7 @@ import { markdownToHtml } from "@/lib/markdownToHtml";
 import LayoutMarkdownWithSidebar from "@/components/LayoutMarkdownWithSidebar";
 
 export default async function LaravelDirectoryStructurePage() {
-  const markdownFilePath = path.join(process.cwd(), "content", "best-practice", "about-value-object.md");
+  const markdownFilePath = path.join(process.cwd(), "content", "study-note/architecture", "null-object.md");
   const markdownContent = fs.readFileSync(markdownFilePath, "utf8");
 
   // Extract headings
@@ -16,7 +16,7 @@ export default async function LaravelDirectoryStructurePage() {
 
   return (
     <>
-      <title>About Value Object</title>
+      <title>Null Object</title>
       <LayoutMarkdownWithSidebar headings={headings} contentHtml={contentHtml} />
     </>
   );
