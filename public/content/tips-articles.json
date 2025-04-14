@@ -18,5 +18,9 @@
   {
     "title": "よく使うGitコマンド",
     "slug": "git-command-cheatsheet"
+  },
+  {
+    "title": "VSCodeチートシート",
+    "slug": "vscode-cheatsheet"
   }
 ]

@@ -10,6 +10,7 @@ import type { Node } from 'unist';
 
 import bash from 'highlight.js/lib/languages/bash';
 import php from 'highlight.js/lib/languages/php';
+import json from 'highlight.js/lib/languages/json';
 
 function remarkRemovePublicPath() {
   return (tree: Node) => {
@@ -21,13 +22,25 @@ function remarkRemovePublicPath() {
   };
 }
 
+function rehypeInlineCodeClass() {
+  return (tree: Node) => {
+    visit(tree, 'element', (node: any) => {
+      if (node.tagName === 'code' && !node.properties?.className) {
+        node.properties = node.properties || {};
+        node.properties.className = ['inline-code']; // クラス名を指定
+      }
+    });
+  };
+}
+
 export async function markdownToHtml(markdownContent: string): Promise<string> {
   const processedContent = await unified()
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRemovePublicPath)
     .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeHighlight, {languages: {bash, php}})
+    .use(rehypeHighlight, {languages: {bash, php, json}})
+    .use(rehypeInlineCodeClass)
     .use(rehypeSlug)
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(markdownContent);

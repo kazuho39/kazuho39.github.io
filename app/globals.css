@@ -150,3 +150,11 @@ html {
   margin: 0;
   color: #333;
 }
+
+.markdown .inline-code {
+  background-color: #2d2d2d;
+  color: #00ff00;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+}
