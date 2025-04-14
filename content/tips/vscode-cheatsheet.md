@@ -1,24 +1,11 @@
 # VSCodeチートシート
-## settings.json
-`.vscode/settings.json` に置くと、ワークスペース(プロジェクト)ごとにVSCodeの設定をカスタマイズできる。  
+## ショートカットキー
+### ファイル名で検索
+`Command + P`  
+ダブルクォーテーションで括ってファイル名の一部を入力して検索する。  
 
-### ルーラーの表示
-エディタにルーラーを表示する。  
-コード実装時に横に長くなりすぎると可読性が下がってしまう。  
-だいたい100〜120文字くらいを目安に、1行が長くなりすぎたら改行してインデントつけたりする。  
-
-以下の設定は、80,100,120文字の位置にルーラー(#FFFFFF)を表示する設定。  
-
-```json
-"editor.rulers": [
-    80,
-    100,
-    120
-],
-"workbench.colorCustomizations": {
-    "editorRuler.foreground": "#FFFFFF"
-}
-```
+### ファイル内の置換
+`Command + Option + F`  
 
 ## コマンドパレットでできること
 コマンドパレットのショートカットキー: `Command + Shift + P`
@@ -41,7 +28,30 @@
 - パスカルケースに変換: `Transform to Pascal Case`
   - e.g. YearMonth
 
+
+## settings.json
+`.vscode/settings.json` に置くと、ワークスペース(プロジェクト)ごとにVSCodeの設定をカスタマイズできる。  
+
+### ルーラーの表示
+エディタにルーラーを表示する。  
+コード実装時に横に長くなりすぎると可読性が下がってしまう。  
+だいたい100〜120文字くらいを目安に、1行が長くなりすぎたら改行してインデントつけたりする。  
+
+以下の設定は、80,100,120文字の位置にルーラー(#FFFFFF)を表示する設定。  
+
+```json
+"editor.rulers": [
+    80,
+    100,
+    120
+],
+"workbench.colorCustomizations": {
+    "editorRuler.foreground": "#FFFFFF"
+}
+```
+
 ## よく使う拡張機能
 ### GitLens
 ### Unique Lines
 ### Markdown Navigation
+
