@@ -20,6 +20,14 @@
     "slug": "git-command-cheatsheet"
   },
   {
+    "title": "GitHub Copilot",
+    "slug": "github-copilot"
+  },
+  {
+    "title": "MySQLチートシート",
+    "slug": "mysql-cheatsheet"
+  },
+  {
     "title": "VSCodeチートシート",
     "slug": "vscode-cheatsheet"
   }
