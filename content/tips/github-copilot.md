@@ -15,11 +15,13 @@ GitHub Copilotに個別に指示するプロンプトファイルを格納する
 - `.github/prompts` ディレクトリに格納したプロンプトが表示されるので、そこから選択
 
 ## .github/instructions
-VSCodeのバージョンを上げたら、 `prompts` ではなく `instructions(手順)` に変更になったようだ。(2025/05/10時点ではバージョン: 1.100.0 (Universal))
+VSCodeのバージョンを上げたら、 `prompts` ではなく `instructions(手順)` に変更になったようだ。  
+(2025/05/10時点ではバージョン: 1.100.0 (Universal))  
+
 大まかなところはpromptsのときと変わらない。  
 ファイル名は `ファイル名.instructions.md` 形式で作成する。(例: `copilot-review.instructions.md`)  
 
-### プロンプトの呼び出し方
+### 手順の呼び出し方
 - チャットから「コンテキストを追加する」(クリップのマーク)を選択
 - 画面上部から「手順」を選択
 - `.github/instructions` ディレクトリに格納した手順が表示されるので、そこから選択
