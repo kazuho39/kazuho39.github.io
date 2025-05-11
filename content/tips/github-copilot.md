@@ -3,6 +3,12 @@
 GitHub Copilotに「前提情報や知識」「対話時のルール」などといった指示情報を定義するファイル。  
 チャット時の事前プロンプトとして読み込まれる。  
 
+もしかしたら、 `.vscode/settings.json` が以下の状態になってないと `copilot-instructions.md`は読み込まれないかも。(※明示的に指定しない限り)  
+
+```json
+"chat.promptFiles": false
+```
+
 ## (old).github/prompts
 GitHub Copilotに個別に指示するプロンプトファイルを格納する。  
 ファイル名は、 `ファイル名.prompts.md` 形式で作成する。(例: `copilot-review.prompt.md`)  
