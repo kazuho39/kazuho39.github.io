@@ -33,6 +33,11 @@ export default function TipsPage() {
           title="Network"
           description="Study about network"
         />
+        <LinkCard
+          href="study-note/security"
+          title="Security"
+          description="Study about security"
+        />
       </div>
     </>
   );
