@@ -28,6 +28,11 @@ export default function TipsPage() {
           title="Word"
           description="Study word"
         />
+        <LinkCard
+          href="study-note/network"
+          title="Network"
+          description="Study about network"
+        />
       </div>
     </>
   );

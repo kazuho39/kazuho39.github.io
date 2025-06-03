@@ -6,7 +6,8 @@ const directories = [
   { input: "content/best-practice", output: "public/content/best-practice-articles.json" },
   { input: "content/column", output: "public/content/column-articles.json" },
   { input: "content/study-note/architecture", output: "public/content/study-note/architecture-articles.json" },
-  { input: "content/study-note/word", output: "public/content/study-note/architecture-word.json" },
+  { input: "content/study-note/word", output: "public/content/study-note/word-articles.json" },
+  { input: "content/study-note/network", output: "public/content/study-note/network-articles.json" },
 ];
 
 function getArticles(directory) {
