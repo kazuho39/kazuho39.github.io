@@ -1,5 +1,9 @@
 [
   {
+    "title": "ドメインについて",
+    "slug": "about-domain"
+  },
+  {
     "title": "AWSでのネットワーク構築",
     "slug": "aws-network"
   }
