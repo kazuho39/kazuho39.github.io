@@ -22,6 +22,21 @@ export default function RootLayout({
             <a href="/" className="text-lg font-bold hover:underline">
               Home
             </a>
+            <a href="/tips" className="text-lg font-bold hover:underline ml-4">
+              Tips
+            </a>
+            <a href="/best-practice" className="text-lg font-bold hover:underline ml-4">
+              Best Practices
+            </a>
+            <a href="/study-note" className="text-lg font-bold hover:underline ml-4">
+              Study Note
+            </a>
+            <a href="/column" className="text-lg font-bold hover:underline ml-4">
+              Column
+            </a>
+            <a href="/seo" className="text-lg font-bold hover:underline ml-4">
+              SEO
+            </a>
           </div>
         </header>
         <main className="flex min-h-screen flex-col items-center justify-between p-4 gap-8 pt-20">
