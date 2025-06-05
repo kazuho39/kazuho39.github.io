@@ -1,6 +1,14 @@
 [
   {
+    "title": "TLSとは",
+    "slug": "about-tls"
+  },
+  {
     "title": "証明書と鍵",
     "slug": "certificates-and-keys"
+  },
+  {
+    "title": "OAuthについて",
+    "slug": "oauth"
   }
 ]
