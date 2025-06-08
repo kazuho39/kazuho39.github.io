@@ -4,8 +4,9 @@ import { extractHeadings, Heading } from "@/lib/extractHeadings";
 import { markdownToHtml } from "@/lib/markdownToHtml";
 import LayoutMarkdownWithSidebar from "@/components/LayoutMarkdownWithSidebar";
 
-export default async function CommandLineCheatsheetPage() {
-  const markdownFilePath = path.join(process.cwd(), "content", "column", "how-to-read-source-code.md");
+export default async function Page() {
+  const markdownFileName = "how-to-read-source-code";
+  const markdownFilePath = path.join(process.cwd(), "content", "column", markdownFileName + ".md");
   const markdownContent = fs.readFileSync(markdownFilePath, "utf8");
 
   // Extract headings
@@ -16,7 +17,7 @@ export default async function CommandLineCheatsheetPage() {
 
   return (
     <>
-      <title>How To Read Source Code</title>
+      <title>{markdownFileName}</title>
       <LayoutMarkdownWithSidebar headings={headings} contentHtml={contentHtml} />
     </>
   );

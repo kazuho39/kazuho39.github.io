@@ -4,8 +4,9 @@ import { extractHeadings, Heading } from "@/lib/extractHeadings";
 import { markdownToHtml } from "@/lib/markdownToHtml";
 import LayoutMarkdownWithSidebar from "@/components/LayoutMarkdownWithSidebar";
 
-export default async function LaravelDirectoryStructurePage() {
-  const markdownFilePath = path.join(process.cwd(), "content", "study-note/network", "about-domain.md");
+export default async function Page() {
+  const markdownFileName = "about-domain";
+  const markdownFilePath = path.join(process.cwd(), "content", "study-note/network", markdownFileName + ".md");
   const markdownContent = fs.readFileSync(markdownFilePath, "utf8");
 
   // Extract headings
@@ -16,7 +17,7 @@ export default async function LaravelDirectoryStructurePage() {
 
   return (
     <>
-      <title>MCP</title>
+      <title>{markdownFileName}</title>
       <LayoutMarkdownWithSidebar headings={headings} contentHtml={contentHtml} />
     </>
   );

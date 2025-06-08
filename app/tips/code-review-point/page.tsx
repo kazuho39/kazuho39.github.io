@@ -4,8 +4,9 @@ import { extractHeadings, Heading } from "@/lib/extractHeadings";
 import { markdownToHtml } from "@/lib/markdownToHtml";
 import LayoutMarkdownWithSidebar from "@/components/LayoutMarkdownWithSidebar";
 
-export default async function GitCommandCheatsheetPage() {
-  const markdownFilePath = path.join(process.cwd(), "content", "tips", "code-review-point.md");
+export default async function Page() {
+  const markdownFileName = "code-review-point";
+  const markdownFilePath = path.join(process.cwd(), "content", "tips", markdownFileName + ".md");
   const markdownContent = fs.readFileSync(markdownFilePath, "utf8");
 
   // Extract headings
@@ -16,7 +17,7 @@ export default async function GitCommandCheatsheetPage() {
 
   return (
     <>
-      <title>code-review-point</title>
+      <title>{markdownFileName}</title>
       <LayoutMarkdownWithSidebar headings={headings} contentHtml={contentHtml} />
     </>
   );

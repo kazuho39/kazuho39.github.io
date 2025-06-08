@@ -5,7 +5,8 @@ import { markdownToHtml } from "@/lib/markdownToHtml";
 import LayoutMarkdownWithSidebar from "@/components/LayoutMarkdownWithSidebar";
 
 export default async function Page() {
-  const markdownFilePath = path.join(process.cwd(), "content", "study-note/security", "about-tls.md");
+  const markdownFileName = "about-tls";
+  const markdownFilePath = path.join(process.cwd(), "content", "study-note/security", markdownFileName + ".md");
   const markdownContent = fs.readFileSync(markdownFilePath, "utf8");
 
   // Extract headings
@@ -16,7 +17,7 @@ export default async function Page() {
 
   return (
     <>
-      <title>About TLS</title>
+      <title>{markdownFileName}</title>
       <LayoutMarkdownWithSidebar headings={headings} contentHtml={contentHtml} />
     </>
   );
