@@ -9,6 +9,7 @@ const directories = [
   { input: "content/study-note/word", output: "public/content/study-note/word-articles.json" },
   { input: "content/study-note/network", output: "public/content/study-note/network-articles.json" },
   { input: "content/study-note/security", output: "public/content/study-note/security-articles.json" },
+  { input: "content/slide", output: "public/content/slide-articles.json" },
 ];
 
 function getArticles(directory) {
