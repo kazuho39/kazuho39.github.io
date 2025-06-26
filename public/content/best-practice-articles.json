@@ -1,5 +1,9 @@
 [
   {
+    "title": "GitHub Copilotを使った開発",
+    "slug": "development-with-github-copilot"
+  },
+  {
     "title": "Laravelのディレクトリ構成",
     "slug": "laravel-directory-structure"
   },

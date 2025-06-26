@@ -14,9 +14,7 @@ export default function SlideDetailLayout({
   return (
     <>
       <HeaderMenu />
-      <div className="slide-container h-screen w-screen overflow-hidden m-0 p-0">
-        {children}
-      </div>
+      {children}
     </>
   );
 }
