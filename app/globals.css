@@ -169,3 +169,7 @@ html {
   text-decoration: underline;
   opacity: 0.8;
 }
+
+.markdown pre {
+  margin-bottom: 15px;
+}
