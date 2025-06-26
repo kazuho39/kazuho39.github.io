@@ -31,6 +31,19 @@ export default function SlideView({ contentHtml }: SlideViewProps) {
     const loadReveal = async () => {
       if (typeof window !== 'undefined' && revealRef.current && processedContent) {
         try {
+          // まず要素を正しいサイズで表示するためにinline styleを適用
+          if (revealRef.current) {
+            // 初期化前に要素のサイズを明示的に設定
+            revealRef.current.style.width = '100%';
+            revealRef.current.style.height = '100%';
+            const slidesElement = revealRef.current.querySelector('.slides');
+            if (slidesElement) {
+              (slidesElement as HTMLElement).style.width = '100%';
+              (slidesElement as HTMLElement).style.height = '100%';
+              (slidesElement as HTMLElement).style.maxHeight = '100%';
+            }
+          }
+          
           // CSSをロード
           await Promise.all([
             loadCSS('https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css', 'reveal-css'),
@@ -53,17 +66,29 @@ export default function SlideView({ contentHtml }: SlideViewProps) {
             hash: true,
             transition: 'slide',
             // 同期を保証するため
-            embedded: false
+            embedded: false,
+            // サイズ自動調整を有効に
+            width: '100%',
+            height: '100%',
+            // 表示を最適化
+            margin: 0.05
           });
           
           // 明示的にスライド0に移動し、レイアウトを強制更新
           deck.slide(0, 0);
           deck.sync();
+          // 念のため複数回レイアウト更新を実行
           deck.layout();
           
-          // 少し遅延を入れて確実にスライドが描画された後にローディングを非表示に
+          // 少し遅延を入れてレイアウトが確実に計算された後にローディングを非表示に
           setTimeout(() => {
             setIsLoading(false);
+            
+            // さらに少し遅延を入れて表示された後に再度レイアウト計算
+            setTimeout(() => {
+              deck.layout();
+              deck.sync();
+            }, 100);
           }, 200);
         } catch (error) {
           console.error('Failed to load Reveal.js:', error);
@@ -94,7 +119,21 @@ export default function SlideView({ contentHtml }: SlideViewProps) {
           // 必要に応じてスクロールをリセット
           window.scrollTo(0, 0);
         }
-      }, 50);
+        
+        // 要素が表示された後に明示的にレイアウトを再計算
+        try {
+          // @ts-ignore - 型エラーを無視
+          const deck = revealRef.current.__reveal;
+          if (deck && typeof deck.layout === 'function') {
+            // スライドのレイアウトを強制的に再計算
+            deck.layout();
+            // 現在のスライドを再同期
+            deck.sync();
+          }
+        } catch (error) {
+          console.error('Failed to update Reveal.js layout:', error);
+        }
+      }, 100); // 少し長めの遅延で確実にDOM更新後に実行
     }
   }, [isLoading]);
   
@@ -186,13 +225,30 @@ export default function SlideView({ contentHtml }: SlideViewProps) {
         .reveal-hidden {
           visibility: hidden;
           opacity: 0;
+          /* レイアウト計算のため要素は存在させるが見えないように */
+          position: absolute;
+          pointer-events: none;
         }
         
         /* ローディング完了後はスライドコンテンツをフェードイン */
         .reveal-visible {
           visibility: visible;
           opacity: 1;
+          position: relative;
           transition: opacity 0.3s ease-in-out;
+        }
+        
+        /* スライド表示の最適化 */
+        .reveal {
+          width: 100% !important;
+          height: 100% !important;
+        }
+        
+        /* スライドのサイズが正しく計算されるようにする */
+        .reveal .slides {
+          width: 100% !important;
+          height: 100% !important;
+          max-height: 100% !important;
         }
       `}</style>
 
@@ -202,8 +258,10 @@ export default function SlideView({ contentHtml }: SlideViewProps) {
         ref={revealRef}
         style={{ 
           position: 'relative',
-          // ローディング中は完全に非表示にして、HTMLが見えないように
-          display: isLoading ? 'none' : 'block'
+          // display:noneではなく、visibility/opacityを使用して
+          // レイアウト計算はされるが見えないようにする
+          visibility: isLoading ? 'hidden' : 'visible',
+          opacity: isLoading ? 0 : 1
         }}
       >
         <div className="slides" dangerouslySetInnerHTML={{ __html: processedContent }} />

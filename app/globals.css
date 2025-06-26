@@ -159,3 +159,13 @@ html {
   border-radius: 4px;
   font-family: 'Courier New', Courier, monospace;
 }
+
+.markdown a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.markdown a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
