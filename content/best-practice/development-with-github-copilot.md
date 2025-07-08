@@ -2,6 +2,15 @@
 ## copilot-instructions.md
 `.github/copilot-instructions.md`
 
+## .github/instructions
+コーディング規約、設計方針などを記載したインストラクションファイルを作成する。  
+ドメイン知識なども蓄積できるようにすると、仕様調査などもしやすくなるかも。  
+
+## .github/prompts
+各作業に関する作業内容を書いておくのがよいのかも。  
+ちょっとまだどういう使い方をすると効率的か分かってない。  
+(コミットメッセージ生成とかは今使ってる、テストコード生成とかにも使えるのかも)  
+
 ## 開発作業
 ### 開発時に使うテンプレートファイル
 [参考URL](https://eiji.page/blog/ai-coding-prompt-2025-05-31/)
