@@ -23,9 +23,29 @@
     "category": "AIツール",
     "bookmarks": [
       {
+        "title": "NotebookLM",
+        "url": "https://notebooklm.google.com/",
+        "description": "Googleが提供するAIツール。ノートやアイデアを整理するための機能が充実。"
+      },
+      {
         "title": "Stitch - Design with AI",
         "url": "https://stitch.withgoogle.com/",
         "description": "Googleが提供するAIツール。テキストや画像のプロンプトからUIデザインとコードを生成できる。"
+      }
+    ]
+  },
+  {
+    "category": "サービス",
+    "bookmarks": [
+      {
+        "title": "Vercel",
+        "url": "https://vercel.com/",
+        "description": "フロントエンドのデプロイとホスティングを簡単にするプラットフォーム。"
+      },
+      {
+        "title": "Supabase",
+        "url": "https://supabase.com/",
+        "description": "オープンソースのFirebase代替。リアルタイムデータベース(PostgreSQL)、認証、ストレージなどを提供。"
       }
     ]
   },
