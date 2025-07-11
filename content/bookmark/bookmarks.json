@@ -1,0 +1,32 @@
+[
+  {
+    "category": "公式",
+    "bookmarks": [
+      {
+        "title": "MDN Web Docs",
+        "url": "https://developer.mozilla.org/ja/",
+        "description": "Web技術の公式ドキュメント。HTML/CSS/JSのリファレンスや解説が充実。"
+      }
+    ]
+  },
+  {
+    "category": "ツール",
+    "bookmarks": [
+      {
+        "title": "Can I use",
+        "url": "https://caniuse.com/",
+        "description": "Webブラウザの対応状況を調べられる便利ツール。"
+      }
+    ]
+  },
+  {
+    "category": "コミュニティ",
+    "bookmarks": [
+      {
+        "title": "Qiita",
+        "url": "https://qiita.com/",
+        "description": "日本最大級のエンジニア向けナレッジ共有サービス。"
+      }
+    ]
+  }
+]

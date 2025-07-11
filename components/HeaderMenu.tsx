@@ -20,6 +20,9 @@ export default function HeaderMenu() {
         <a href="/seo" className="text-lg font-bold hover:underline ml-4">
           SEO
         </a>
+        <a href="/bookmark" className="text-lg font-bold hover:underline ml-4">
+          Bookmark
+        </a>
       </div>
     </header>
   );

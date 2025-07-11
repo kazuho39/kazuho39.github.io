@@ -31,6 +31,11 @@ export default function Home() {
             title="SEO"
             description="About SEO."
           />
+          <LinkCard
+            href="/bookmark"
+            title="Bookmark"
+            description="My Bookmark."
+          />
         </div>
       </main>
     </>
