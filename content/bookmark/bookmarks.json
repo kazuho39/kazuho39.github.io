@@ -3,6 +3,16 @@
     "category": "公式",
     "bookmarks": [
       {
+        "title": "GitHub",
+        "url": "https://github.com/",
+        "description": "ソースコードのホスティングサービス。"
+      },
+      {
+        "title": "Visual Studio Code",
+        "url": "https://code.visualstudio.com/",
+        "description": "Microsoftが提供する無料のソースコードエディタ。"
+      },
+      {
         "title": "MDN Web Docs",
         "url": "https://developer.mozilla.org/ja/",
         "description": "Web技術の公式ドキュメント。HTML/CSS/JSのリファレンスや解説が充実。"
@@ -10,8 +20,28 @@
     ]
   },
   {
+    "category": "AIツール",
+    "bookmarks": [
+      {
+        "title": "Stitch - Design with AI",
+        "url": "https://stitch.withgoogle.com/",
+        "description": "Googleが提供するAIツール。テキストや画像のプロンプトからUIデザインとコードを生成できる。"
+      }
+    ]
+  },
+  {
     "category": "ツール",
     "bookmarks": [
+      {
+        "title": "PNG圧縮ツール",
+        "url": "https://www.iloveimg.com/ja/compress-image/compress-png",
+        "description": "画像圧縮ツール。PNGを圧縮してファイルサイズを小さくする。"
+      },
+      {
+        "title": "グローバルIPアドレス確認",
+        "url": "https://www.cman.jp/network/support/go_access.cgi",
+        "description": "自分のグローバルIPアドレスを確認できるサイト。"
+      },
       {
         "title": "Can I use",
         "url": "https://caniuse.com/",
@@ -20,12 +50,22 @@
     ]
   },
   {
-    "category": "コミュニティ",
+    "category": "コミュニティ/情報収集",
     "bookmarks": [
       {
         "title": "Qiita",
         "url": "https://qiita.com/",
         "description": "日本最大級のエンジニア向けナレッジ共有サービス。"
+      }
+    ]
+  },
+  {
+    "category": "参考になるリポジトリ",
+    "bookmarks": [
+      {
+        "title": "github/awesome-copilot",
+        "url": "https://github.com/github/awesome-copilot",
+        "description": "GitHub Copilotの活用方法や事例を集めたリポジトリ。"
       }
     ]
   }
