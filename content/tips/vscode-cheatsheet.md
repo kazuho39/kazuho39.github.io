@@ -57,4 +57,5 @@
 ### GitLens
 ### Unique Lines
 ### Markdown Navigation
-
+### Markdown Preview Enhanced
+### Markdown Preview Mermaid Support
