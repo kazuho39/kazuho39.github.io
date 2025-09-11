@@ -17,14 +17,14 @@ export default function Home() {
             description="My Best Practice."
           />
           <LinkCard
+            href="/aws"
+            title="AWS"
+            description="Study About AWS"
+          />
+          <LinkCard
             href="/study-note"
             title="Stydy Note"
             description="My Study Node."
-          />
-          <LinkCard
-            href="/column"
-            title="Column"
-            description="My Column."
           />
           <LinkCard
             href="/seo"
@@ -35,6 +35,11 @@ export default function Home() {
             href="/bookmark"
             title="Bookmark"
             description="My Bookmark."
+          />
+          <LinkCard
+            href="/column"
+            title="Column"
+            description="My Column."
           />
         </div>
       </main>
