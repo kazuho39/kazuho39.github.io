@@ -1,4 +1,9 @@
 # AWS WAF
+## 【要点】
+- CloudFront, ALB, API Gatewayなどにアタッチして利用する
+- Web ACLで、アクセス制御ルールを定義する
+- IP setsを使えば、アタッチしたリソースに対するアクセスIP制限をかけることができる
+
 ## AWS WAFとは
 [AWS WAF](https://aws.amazon.com/jp/waf/)
 

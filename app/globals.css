@@ -81,7 +81,7 @@ html {
 
 .markdown ul, .markdown ol {
   margin-left: 1.5em;
-  margin-bottom: 1em;
+  margin-bottom: 0.6em;
   color: white;
   @apply list-disc;
 }

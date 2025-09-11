@@ -9,6 +9,11 @@ export default function TipsPage() {
       <div className="flex w-full flex-col items-center p-12">
         <h1 className="text-4xl font-bold mb-8">AWS</h1>
         <LinkCard
+          href="aws/storage-delivery"
+          title="ストレージ／配信"
+          description="Study about Storage and Delivery"
+        />
+        <LinkCard
           href="aws/operations-security"
           title="運用・監視／セキュリティ"
           description="Study about Operations and Security"

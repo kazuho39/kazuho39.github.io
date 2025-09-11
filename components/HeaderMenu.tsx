@@ -11,6 +11,9 @@ export default function HeaderMenu() {
         <a href="/best-practice" className="text-lg font-bold hover:underline ml-4">
           Best Practices
         </a>
+        <a href="/aws" className="text-lg font-bold hover:underline ml-4">
+          AWS
+        </a>
         <a href="/study-note" className="text-lg font-bold hover:underline ml-4">
           Study Note
         </a>

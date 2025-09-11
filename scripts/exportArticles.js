@@ -11,6 +11,7 @@ const directories = [
   { input: "content/study-note/security", output: "public/content/study-note/security-articles.json" },
   { input: "content/slide", output: "public/content/slide-articles.json" },
   { input: "content/aws/operations-security", output: "public/content/aws/operations-security-articles.json" },
+  { input: "content/aws/storage-delivery", output: "public/content/aws/storage-delivery-articles.json" },
 ];
 
 function getArticles(directory) {
