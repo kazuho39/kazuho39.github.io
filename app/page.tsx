@@ -22,8 +22,13 @@ export default function Home() {
             description="Study About AWS"
           />
           <LinkCard
+            href="/google-cloud"
+            title="Google Cloud"
+            description="Study About Google Cloud"
+          />
+          <LinkCard
             href="/study-note"
-            title="Stydy Note"
+            title="Study Note"
             description="My Study Node."
           />
           <LinkCard

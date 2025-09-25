@@ -14,6 +14,9 @@ export default function HeaderMenu() {
         <a href="/aws" className="text-lg font-bold hover:underline ml-4">
           AWS
         </a>
+        <a href="/google-cloud" className="text-lg font-bold hover:underline ml-4">
+          Google Cloud
+        </a>
         <a href="/study-note" className="text-lg font-bold hover:underline ml-4">
           Study Note
         </a>
