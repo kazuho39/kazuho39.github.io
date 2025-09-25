@@ -6,7 +6,7 @@ import LayoutMarkdownWithSidebar from "@/components/LayoutMarkdownWithSidebar";
 
 export default async function Page() {
   const markdownFileName = "about-gemini";
-  const markdownFilePath = path.join(process.cwd(), "content", "gcp", markdownFileName + ".md");
+  const markdownFilePath = path.join(process.cwd(), "content", "google-cloud", markdownFileName + ".md");
   const markdownContent = fs.readFileSync(markdownFilePath, "utf8");
 
   // Extract headings
