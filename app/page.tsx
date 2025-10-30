@@ -32,6 +32,11 @@ export default function Home() {
             description="My Study Node."
           />
           <LinkCard
+            href="/services"
+            title="Services"
+            description="Study About Services"
+          />
+          <LinkCard
             href="/seo"
             title="SEO"
             description="About SEO."

@@ -20,6 +20,9 @@ export default function HeaderMenu() {
         <a href="/study-note" className="text-lg font-bold hover:underline ml-4">
           Study Note
         </a>
+        <a href="/services" className="text-lg font-bold hover:underline ml-4">
+          Services
+        </a>
         <a href="/column" className="text-lg font-bold hover:underline ml-4">
           Column
         </a>
