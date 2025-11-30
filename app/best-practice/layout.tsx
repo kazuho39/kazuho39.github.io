@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import HeaderMenu from "@/components/HeaderMenu";
+import { SidebarProvider } from "@/contexts/SidebarContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,9 @@ export default function SlideDetailLayout({
   return (
     <>
       <HeaderMenu />
-      {children}
+      <SidebarProvider>
+        {children}
+      </SidebarProvider>
     </>
   );
 }

@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import Sidebar from "@/components/Sidebar";
 import { Heading } from "@/lib/extractHeadings";
+import { useSidebar } from "@/contexts/SidebarContext";
 
 interface LayoutMarkdownWithSidebarProps {
   headings: Heading[];
@@ -10,6 +11,7 @@ interface LayoutMarkdownWithSidebarProps {
 }
 
 const LayoutMarkdownWithSidebar: React.FC<LayoutMarkdownWithSidebarProps> = ({ headings, contentHtml }) => {
+  const { isOpen } = useSidebar();
   useEffect(() => {
     // コピーボタンにイベントリスナーを登録
     const copyButtons = document.querySelectorAll('.copy-button');
@@ -69,7 +71,7 @@ const LayoutMarkdownWithSidebar: React.FC<LayoutMarkdownWithSidebarProps> = ({ h
       <Sidebar headings={headings} />
 
       {/* Main content */}
-      <div className="markdown w-full md:w-3/4">
+      <div className={`markdown w-full transition-all duration-300 ${isOpen ? 'md:w-3/4' : 'md:w-[calc(100%-4rem)]'}`}>
         <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </div>
     </div>
