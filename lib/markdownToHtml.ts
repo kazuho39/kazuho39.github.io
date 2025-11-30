@@ -33,6 +33,61 @@ function rehypeInlineCodeClass() {
   };
 }
 
+// コードブロックにコピーボタンを追加するrehypeプラグイン
+function rehypeAddCopyButton() {
+  return (tree: Node) => {
+    visit(tree, 'element', (node: any) => {
+      // <pre> 内の <code> を探す（コードブロック）
+      if (node.tagName === 'pre') {
+        const codeNode = node.children?.find(
+          (child: any) => child.tagName === 'code'
+        );
+        
+        if (codeNode) {
+          // コードの内容を取得
+          const codeText = extractTextFromNode(codeNode);
+          
+          // ボタン要素を追加
+          node.children.unshift({
+            type: 'element',
+            tagName: 'button',
+            properties: {
+              className: ['copy-button'],
+              'data-code': codeText,
+              'aria-label': 'Copy code to clipboard',
+              type: 'button',
+            },
+            children: [
+              {
+                type: 'element',
+                tagName: 'span',
+                properties: { className: ['copy-icon'] },
+                children: [{ type: 'text', value: '📋' }],
+              },
+            ],
+          });
+          
+          // pre要素にクラスを追加
+          node.properties = node.properties || {};
+          node.properties.className = [
+            ...(Array.isArray(node.properties.className) ? node.properties.className : []),
+            'code-block-with-copy',
+          ];
+        }
+      }
+    });
+  };
+}
+
+// ヘルパー関数：ノードからテキストを再帰的に抽出
+function extractTextFromNode(node: any): string {
+  if (node.type === 'text') return node.value;
+  if (node.children) {
+    return node.children.map(extractTextFromNode).join('');
+  }
+  return '';
+}
+
 export async function markdownToHtml(markdownContent: string): Promise<string> {
   const processedContent = await unified()
     .use(remarkParse)
@@ -41,6 +96,7 @@ export async function markdownToHtml(markdownContent: string): Promise<string> {
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeHighlight, {languages: {bash, php, json}})
     .use(rehypeInlineCodeClass)
+    .use(rehypeAddCopyButton) // コピーボタンプラグインを追加
     .use(rehypeSlug)
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(markdownContent);
