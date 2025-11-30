@@ -79,13 +79,35 @@ function rehypeAddCopyButton() {
   };
 }
 
-// ヘルパー関数：ノードからテキストを再帰的に抽出
+// ヘルパー関数:ノードからテキストを再帰的に抽出
 function extractTextFromNode(node: any): string {
   if (node.type === 'text') return node.value;
   if (node.children) {
     return node.children.map(extractTextFromNode).join('');
   }
   return '';
+}
+
+// テーブルをスクロール可能なdivで囲むrehypeプラグイン
+function rehypeWrapTable() {
+  return (tree: Node) => {
+    visit(tree, 'element', (node: any, index: number, parent: any) => {
+      if (node.tagName === 'table' && parent) {
+        // テーブルをdivで囲む
+        const wrapper = {
+          type: 'element',
+          tagName: 'div',
+          properties: {
+            className: ['table-wrapper'],
+          },
+          children: [node],
+        };
+        
+        // 親ノードの中で置き換え
+        parent.children[index] = wrapper;
+      }
+    });
+  };
 }
 
 export async function markdownToHtml(markdownContent: string): Promise<string> {
@@ -97,6 +119,7 @@ export async function markdownToHtml(markdownContent: string): Promise<string> {
     .use(rehypeHighlight, {languages: {bash, php, json}})
     .use(rehypeInlineCodeClass)
     .use(rehypeAddCopyButton) // コピーボタンプラグインを追加
+    .use(rehypeWrapTable) // テーブルラッププラグインを追加
     .use(rehypeSlug)
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(markdownContent);

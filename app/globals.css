@@ -95,8 +95,18 @@ html {
   cursor: pointer;
 }
 
+/* テーブルラッパー(横スクロール対応) */
+.markdown .table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+  width: 100%;
+}
+
 .markdown table {
-  @apply w-full text-sm text-left text-gray-500 overflow-x-auto shadow-md sm:rounded-lg m-4;
+  @apply w-full text-sm text-left text-gray-500 shadow-md sm:rounded-lg;
+  min-width: 600px; /* テーブルの最小幅を設定 */
+  margin: 0;
 }
 
 .markdown thead {
