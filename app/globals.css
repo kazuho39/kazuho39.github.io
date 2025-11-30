@@ -173,3 +173,53 @@ html {
 .markdown pre {
   margin-bottom: 15px;
 }
+
+/* コードブロックコピーボタンのスタイル */
+.markdown .code-block-with-copy {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.markdown .copy-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+  font-size: 1rem;
+  z-index: 10;
+}
+
+.markdown .copy-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.markdown .copy-button:active {
+  transform: scale(0.95);
+}
+
+.markdown .copy-button:focus {
+  outline: 2px solid #1e90ff;
+  outline-offset: 2px;
+}
+
+.markdown .copy-icon {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+  .markdown .copy-button {
+    top: 0.25rem;
+    right: 0.25rem;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.875rem;
+  }
+}
