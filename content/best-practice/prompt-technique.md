@@ -290,21 +290,21 @@ Direction を踏まえて回答してください。
 ```
 
 
-## 9. Zero-shot Prompting
-### 概要(Zero-shot Prompting)
+## 9. Multimodal CoT
+### 概要(Multimodal CoT)
 画像＋テキストの「マルチモーダル」入力にCoTを適用。画像理解＋推論を可能にする。  
 画像＋文章を組み合わせた推論。画像理解しながらCoTで推論。  
 
-### こういうシーンにおすすめ(Zero-shot Prompting)
+### こういうシーンにおすすめ(Multimodal CoT)
 - 画像説明＋推論・OCRの文脈理解
 - 画像に基づく判断タスク（例：医療、地図、図表）
 
-### 推奨用途(Zero-shot Prompting)
+### 推奨用途(Multimodal CoT)
 - 画像に基づく判断（UI、デザイン、図表など）
 - OCRした文章の文脈理解
 - 写真＋文章の分析タスク
 
-### テンプレート(Zero-shot Prompting)
+### テンプレート(Multimodal CoT)
 
 ```markdown
 以下の画像を解析し、内容を理解したうえで、Chain-of-Thought に基づいて回答してください。
