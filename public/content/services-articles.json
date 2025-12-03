@@ -1,5 +1,13 @@
 [
   {
+    "title": "Figma Make",
+    "slug": "figma-make"
+  },
+  {
+    "title": "Google Stitch",
+    "slug": "google-stitch"
+  },
+  {
     "title": "Supabase",
     "slug": "supabase"
   },
